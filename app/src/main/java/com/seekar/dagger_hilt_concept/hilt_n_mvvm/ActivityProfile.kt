@@ -21,5 +21,7 @@ class ActivityProfile : AppCompatActivity() {
 
         val user = profileViewModel.getProfileData()
         profileData.text = user.Name +"\n"+user.Address
+
+        //
     }
 }
