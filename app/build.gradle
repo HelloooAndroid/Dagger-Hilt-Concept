@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id  'kotlin-kapt'
     id  'dagger.hilt.android.plugin'
+    id 'kotlin-android-extensions'  //Using this line you can use Xml UI id's directly into Activity/Fragments. (Say goodBye to findViewById)
 }
 
 android {
@@ -53,7 +54,7 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:${hilt_lifecycle}"
+    //implementation "androidx.hilt:hilt-lifecycle-viewmodel:${hilt_lifecycle}"
     //For viewmodel injection
     kapt "androidx.hilt:hilt-compiler:$hilt_lifecycle"
     implementation 'androidx.fragment:fragment-ktx:1.1.0'

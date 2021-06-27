@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HiltConcept">
-        <activity android:name=".viewmodel_ex.MyActivity_ViewModelExample">
+        <activity android:name=".hilt_n_mvvm.ActivityProfile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

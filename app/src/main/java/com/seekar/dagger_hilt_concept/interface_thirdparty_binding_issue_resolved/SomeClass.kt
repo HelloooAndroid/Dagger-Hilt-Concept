@@ -33,7 +33,7 @@ constructor()  {
 //Issue with interface
 class SomeClass
 @Inject
-constructor(private val iPrint:IPrint, private val gson:Gson){
+constructor(private val iPrint:IPrint, private  val gson: Gson){
     fun getMyData():String{
         return iPrint.getPrintableData()
     }
@@ -48,13 +48,6 @@ constructor() :IPrint {
     }
 }
 
-class PrintSecureData2 //Some dependency class for print
-@Inject
-constructor() :IPrint {
-    override fun getPrintableData(): String {
-        return "PRATIM n AK n Secure"
-    }
-}
 
 
 interface IPrint{
@@ -79,20 +72,7 @@ abstract class Mymodule{
 
 
 //solution two -> Awesome
-@InstallIn(ActivityComponent::class)
-@Module
-class MyModule{
-    @ActivityScoped
-    @Provides
-    fun providePrintInterfaceImpl():IPrint{
-        return  PrintData()
-    }
+//see code in MyModule class
 
 
-    /*For third party class*/
-    @ActivityScoped
-    @Provides
-    fun provideGsonImpl():Gson{
-        return  Gson()
-    }
-}
+

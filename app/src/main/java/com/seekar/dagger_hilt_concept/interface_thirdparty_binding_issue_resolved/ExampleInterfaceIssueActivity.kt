@@ -3,6 +3,7 @@ package com.seekar.dagger_hilt_concept.interface_thirdparty_binding_issue_resolv
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.seekar.dagger_hilt_concept.R
+import com.seekar.dagger_hilt_concept.examples.car.*
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -10,7 +11,7 @@ import javax.inject.Inject
 class ExampleInterfaceIssueActivity : AppCompatActivity() {
     
     companion object {
-        const val TAG = "TAG_ScopeActivity: "
+        const val TAG = "TAG_ExampleInterfaceIssueActivity: "
     }
 
     @Inject
@@ -23,7 +24,7 @@ class ExampleInterfaceIssueActivity : AppCompatActivity() {
 
        println(TAG + someClass.getMyData())
 
-
+        //var car = Car(Wheels(), Engine(Clutch(), Gear(),Break())) //Dependency Injection
     }
 
 }

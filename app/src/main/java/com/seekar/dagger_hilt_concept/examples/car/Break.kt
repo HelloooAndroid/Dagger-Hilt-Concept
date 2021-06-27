@@ -7,7 +7,6 @@ import javax.inject.Inject
 class Break {
     @Inject
     constructor() {
-
         Log.d(MainActivity.TAG, ": Breaks are ready")
     }
 

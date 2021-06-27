@@ -29,14 +29,14 @@ class MyActivity : AppCompatActivity() {
     }
 
     @Inject
-    lateinit var activityScopeClass: ActivityScopeClass
+    lateinit var scope: ActivityScopeClass
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       println(TAG + activityScopeClass.doAThing())
+       println(TAG + scope.doAThing())
 
 
     }
